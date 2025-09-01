@@ -1,57 +1,28 @@
   
 # uParcel App Testing Documentation
 
-![uParcel Logo](https://images.openai.com/thumbnails/url/f-nfFXicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw7yCzAMLA-uMC4szDQP9zUszctzMwt39KgsDTDy9HA3Cc_QdcqtCklPCvBwSTELDfcsckrKKi5J8TF3SVcrBgANeimO)
+![uParcel Logo](https://uparcel.s3.us-west-2.amazonaws.com/uparcel/blog/cover/1696409567.718379_BestDeliveryAppinSingaporepng.png)
 
 ## About MHXL PTE. LTD (uParcel)
 
-**MHXL PTE. LTD.** (registered in Singapore as MXHL Pte Ltd, UEN 201419692G) is the innovative technology company powering **uParcel**, Southeast Asia's premier 24/7 on-demand courier platform. Since launching in July 2014, uParcel has revolutionized last-mile delivery across Singapore and Malaysia, establishing itself as a trusted partner for businesses and individuals seeking reliable, affordable logistics solutions.
+**MHXL PTE. LTD.** (registered in Singapore as MXHL Pte Ltd, UEN 201419692G) is the technology company behind **uParcel**, a 24/7 on-demand courier platform that has been operating since July 2014.
 
-### Company Overview
+### Company Information
 
-Headquartered at **11 Tai Seng Drive #05-01 Singapore 535226** with strategic operations extending to **Subang Jaya, Malaysia**, MHXL PTE. LTD. operates with a clear mission: to make same-day and next-day parcel delivery **simple, affordable, and transparent**. Our decade-long commitment to excellence has positioned uParcel as a market leader in the competitive Southeast Asian logistics landscape.
+Headquartered at **11 Tai Seng Drive #05-01 Singapore 535226** with a Malaysia office in **Subang Jaya**, the company focuses on making same-day and next-day parcel delivery simple, affordable and transparent.
 
-### Key Services & Features
+### Service Overview
 
-**🚀 Core Delivery Services:**
-- **24/7 On-Demand Pickup & Delivery** - Round-the-clock service availability
-- **Same-Day & Next-Day Delivery** - Flexible delivery options to meet urgent needs
-- **Island-Wide Coverage** - Comprehensive service across Singapore
-- **Real-Time Tracking** - Live parcel monitoring throughout the delivery journey
+The uParcel service is powered by a location-based matching engine that assigns the closest available delivery agent to pick up and drop off parcels anywhere in Singapore.
 
-**💰 Competitive Pricing:**
-- **Starting from S$4–S$8** per delivery with no minimum volume requirements
-- **Automatic Insurance** up to S$100 for every parcel
-- **Bulk Discounts** available for business customers
-- **Scalable Pricing** with additional insurance options
+**Pricing & Coverage:**
+- Standard pricing starts from **S$4–S$8 per delivery** with no minimum volume
+- Every parcel is **automatically insured up to S$100**
+- Businesses can unlock **bulk discounts and additional insurance** by contacting the sales team
 
-### Technology & Innovation
+### Technology
 
-uParcel's service excellence is powered by our proprietary **location-based matching engine**, which intelligently assigns the closest available delivery agent to each pickup request. This advanced algorithm ensures:
-
-- **Optimal Route Efficiency** - Reduced delivery times and operational costs
-- **Real-Time Agent Allocation** - Dynamic matching based on proximity and availability
-- **Seamless User Experience** - Intuitive mobile app interface for both customers and agents
-- **Data-Driven Insights** - Analytics for route optimization and service improvement
-
-### E-Commerce Fulfillment Solutions
-
-Beyond individual deliveries, uParcel provides comprehensive **B2B logistics solutions** tailored for e-commerce businesses:
-
-- **API Integration** for seamless order management
-- **Bulk Shipping Discounts** for high-volume merchants
-- **Dedicated Account Management** for enterprise clients
-- **Customizable Insurance Coverage** for high-value shipments
-- **White-Label Solutions** for businesses seeking branded delivery experiences
-
-### Market Position & Achievements
-
-With over **9 years of operational excellence**, uParcel has:
-- ✅ Processed **millions of successful deliveries**
-- ✅ Built a **robust network** of verified delivery agents
-- ✅ Maintained **99%+ delivery success rate**
-- ✅ Established **strategic partnerships** with major e-commerce platforms
-- ✅ Achieved **ISO-certified operations** ensuring quality and reliability
+uParcel uses a **location-based matching engine** to connect customers with the nearest available delivery agents for efficient pickup and delivery services.
 
 ---
 
