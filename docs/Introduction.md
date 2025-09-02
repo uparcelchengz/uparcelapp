@@ -15,11 +15,6 @@ Headquartered at **11 Tai Seng Drive #05-01 Singapore 535226** with a Malaysia o
 
 The uParcel service is powered by a location-based matching engine that assigns the closest available delivery agent to pick up and drop off parcels anywhere in Singapore.
 
-**Pricing & Coverage:**
-- Standard pricing starts from **S$4–S$8 per delivery** with no minimum volume
-- Every parcel is **automatically insured up to S$100**
-- Businesses can unlock **bulk discounts and additional insurance** by contacting the sales team
-
 ### Technology
 
 uParcel uses a **location-based matching engine** to connect customers with the nearest available delivery agents for efficient pickup and delivery services.

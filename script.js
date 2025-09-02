@@ -1,6 +1,9 @@
+// ✨ Note: If you want to add other edit the directories or files search 'New Edits'
+
+
 // Global state management
 const state = {
-    currentFile: 'Introduction.md',
+    currentFile: 'docs/Introduction.md',
     theme: localStorage.getItem('theme') || 'light',
     sidebarOpen: false,
     markdownCache: {},
@@ -396,14 +399,11 @@ async function loadManifest() {
 async function scanDocsDirectory() {
     const structure = {};
     
-    // Define the directory structure to scan
+    // Define the actual directories in your workspace (New Edits)
     const directoriesToScan = [
         { path: 'docs/', section: 'Getting Started' },
         { path: 'docs/expectations/', section: 'Expectations' },
-        { path: 'docs/api/', section: 'API Reference' },
         { path: 'docs/dry-runs/', section: 'Dry Runs' },
-        { path: 'docs/guides/', section: 'Guides' },
-        { path: 'docs/examples/', section: 'Examples' }
     ];
     
     for (const dir of directoriesToScan) {
@@ -413,12 +413,9 @@ async function scanDocsDirectory() {
         }
     }
     
-    // If no files found in docs, check root directory
+    // If no files found anywhere, use fallback
     if (Object.keys(structure).length === 0) {
-        const rootFiles = await scanRootDirectory();
-        if (rootFiles.length > 0) {
-            structure['Getting Started'] = rootFiles;
-        }
+        return getFallbackStructure();
     }
     
     return structure;
@@ -427,93 +424,24 @@ async function scanDocsDirectory() {
 async function scanDirectory(directoryPath) {
     const files = [];
     
-    // Common markdown files to look for
-    const commonFiles = [
-        'README.md',
-        'introduction.md',
-        'installation.md',
-        'quick-start.md',
-        'getting-started.md',
-        'overview.md',
-        'index.md'
-    ];
-    
-    // If it's the root docs directory, check for main files
-    if (directoryPath === 'docs/') {
-        for (const fileName of commonFiles) {
-            const filePath = directoryPath + fileName;
-            if (await fileExists(filePath)) {
-                files.push({
-                    name: formatFileName(fileName),
-                    file: filePath,
-                    path: filePath
-                });
-            }
-        }
-    } else {
-        // For subdirectories, try to discover files
-        const knownFiles = await discoverFilesInDirectory(directoryPath);
-        files.push(...knownFiles);
-    }
-    
-    return files;
-}
-
-async function scanRootDirectory() {
-    const files = [];
-    const rootFiles = ['README.md', 'quick-start.md', 'installation.md'];
-    
-    for (const fileName of rootFiles) {
-        if (await fileExists(fileName)) {
-            files.push({
-                name: formatFileName(fileName),
-                file: fileName,
-                path: fileName
-            });
-        }
-    }
-    
-    return files;
-}
-
-async function discoverFilesInDirectory(directoryPath) {
-    const files = [];
-    
-    // Try common file patterns for different directory types
-    const filePatterns = {
-        'docs/api/': [
-            'authentication.md',
-            'endpoints.md',
-            'reference.md',
-            'getting-started.md',
-            'examples.md',
-            'README.md'
+    // Define known files based on your actual structure (New Edits)
+    const knownFiles = {
+        'docs/': [
+            'introduction.md'
+        ],
+        'docs/expectations/': [
+            // Add any files you have in the expectations directory
+            'customer expectations.md',
+            'agent expectations.md'
         ],
         'docs/dry-runs/': [
-            'example-1.md',
-            'example-2.md',
-            'basic-workflow.md',
-            'advanced-workflow.md',
-            'README.md'
+            'customer.md'
         ],
-        'docs/guides/': [
-            'deployment.md',
-            'configuration.md',
-            'troubleshooting.md',
-            'best-practices.md',
-            'README.md'
-        ],
-        'docs/examples/': [
-            'basic-usage.md',
-            'advanced-usage.md',
-            'integration.md',
-            'README.md'
-        ]
     };
     
-    const patterns = filePatterns[directoryPath] || ['README.md'];
+    const filesToCheck = knownFiles[directoryPath] || [];
     
-    for (const fileName of patterns) {
+    for (const fileName of filesToCheck) {
         const filePath = directoryPath + fileName;
         if (await fileExists(filePath)) {
             files.push({
@@ -600,22 +528,163 @@ function showNavigationLoading(show) {
     }
 }
 
+// Fallback structure for navigation (New Edits)
 function getFallbackStructure() {
     return {
         'Getting Started': [
-            { name: 'Overview', file: 'README.md' },
-            { name: 'Quick Start', file: 'docs/quick-start.md' },
-            { name: 'Installation', file: 'docs/installation.md' }
+            { 
+                name: 'Introduction', 
+                file: 'docs/Introduction.md',
+                description: 'Overview of uParcel and testing platform'
+            }
         ],
         'Dry Runs': [
-            { name: 'Example 1', file: 'docs/dry-runs/example-1.md' },
-            { name: 'Example 2', file: 'docs/dry-runs/example-2.md' }
+            { 
+                name: 'Customer Booking', 
+                file: 'docs/dry-runs/customer.md',
+                description: 'Customer workflow testing guide'
+            }
         ],
-        'API Reference': [
-            { name: 'Authentication', file: 'docs/api/authentication.md' },
-            { name: 'Endpoints', file: 'docs/api/endpoints.md' }
+        'Expectations': [
+            { 
+                name: 'Platform Requirements', 
+                file: 'docs/expectations/platform-requirements.md',
+                description: 'Technical requirements and benchmarks'
+            }
         ]
     };
+}
+
+// Get all pages in order for pagination
+function getAllPagesInOrder() {
+    const pages = [];
+    Object.values(state.fileStructure).forEach(section => {
+        if (Array.isArray(section)) {
+            section.forEach(page => {
+                pages.push(page);
+            });
+        }
+    });
+    return pages;
+}
+
+// Get previous and next pages for current file
+function getPreviousNextPages(currentFile) {
+    const allPages = getAllPagesInOrder();
+    const currentIndex = allPages.findIndex(page => page.file === currentFile);
+    
+    return {
+        previous: currentIndex > 0 ? allPages[currentIndex - 1] : null,
+        next: currentIndex < allPages.length - 1 ? allPages[currentIndex + 1] : null
+    };
+}
+
+// Add pagination navigation at the bottom of content
+function addPaginationNavigation() {
+    const pagination = getPreviousNextPages(state.currentFile);
+    
+    if (!pagination.previous && !pagination.next) {
+        return; // No pagination needed if only one page
+    }
+    
+    const paginationHtml = `
+        <div class="pagination-navigation">
+            <div class="pagination-container">
+                ${pagination.previous ? `
+                    <div class="pagination-item previous">
+                        <button class="pagination-btn" data-file="${pagination.previous.file}">
+                            <i class="fas fa-chevron-left"></i>
+                            <div class="pagination-text">
+                                <span class="pagination-label">Previous</span>
+                                <span class="pagination-title">${pagination.previous.name}</span>
+                            </div>
+                        </button>
+                    </div>
+                ` : '<div class="pagination-item"></div>'}
+                
+                ${pagination.next ? `
+                    <div class="pagination-item next">
+                        <button class="pagination-btn" data-file="${pagination.next.file}">
+                            <div class="pagination-text">
+                                <span class="pagination-label">Next</span>
+                                <span class="pagination-title">${pagination.next.name}</span>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                ` : '<div class="pagination-item"></div>'}
+            </div>
+        </div>
+    `;
+    
+    elements.markdownContent.insertAdjacentHTML('beforeend', paginationHtml);
+    
+    // Add event listeners for pagination buttons
+    const paginationBtns = elements.markdownContent.querySelectorAll('.pagination-btn');
+    paginationBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetFile = btn.dataset.file;
+            if (targetFile) {
+                // Update navigation active state
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.file === targetFile) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                loadMarkdownFile(targetFile);
+                
+                // Scroll to top smoothly
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+// Process internal links within markdown content
+function processInternalLinks() {
+    const links = elements.markdownContent.querySelectorAll('a[href]');
+    
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Check if it's an internal link to another markdown file
+        if (href.endsWith('.md') && !href.startsWith('http')) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Convert relative path to full path
+                let targetFile = href;
+                if (!targetFile.startsWith('docs/')) {
+                    targetFile = `docs/${targetFile}`;
+                }
+                
+                // Update navigation active state
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active');
+                    if (navLink.dataset.file === targetFile) {
+                        navLink.classList.add('active');
+                    }
+                });
+                
+                loadMarkdownFile(targetFile);
+                
+                // Close sidebar on mobile
+                if (window.innerWidth <= 768) {
+                    closeSidebar();
+                }
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Add visual indicator for internal links
+            link.classList.add('internal-link');
+            link.insertAdjacentHTML('beforeend', ' <i class="fas fa-link internal-link-icon"></i>');
+        }
+    });
 }
 
 // Utility functions for enhanced functionality
@@ -662,7 +731,7 @@ function addCopyButtons() {
     });
 }
 
-// Enhanced markdown rendering with copy buttons
+// Enhanced markdown rendering with copy buttons and pagination
 function renderMarkdown(markdownContent) {
     try {
         marked.setOptions({
@@ -683,6 +752,8 @@ function renderMarkdown(markdownContent) {
         addCodeBlockLabels();
         addCopyButtons();
         processNoteBlocks();
+        processInternalLinks(); // Add internal link processing
+        addPaginationNavigation(); // Add pagination at bottom
         
         elements.markdownContent.classList.add('loaded');
         updateLastModified();
