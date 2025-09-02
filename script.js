@@ -427,7 +427,7 @@ async function scanDirectory(directoryPath) {
     // Define known files based on your actual structure (New Edits)
     const knownFiles = {
         'docs/': [
-            'introduction.md'
+            'Introduction.md'
         ],
         'docs/expectations/': [
             // Add any files you have in the expectations directory
