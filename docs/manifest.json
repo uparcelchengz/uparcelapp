@@ -1,28 +1,28 @@
 {
-  "Getting Started": [
+  "1. Getting Started": [
     {
       "name": "Introduction",
       "file": "docs/Introduction.md",
       "description": "<img src=\"https://uparcel.s3.us-west-2.amazonaws.com/uparcel/blog/cover/1696409567.718379_BestDeliveryAppinSingaporep..."
     }
   ],
-  "Dry Runs": [
-    {
-      "name": "Customer",
-      "file": "docs/dry-runs/customer.md",
-      "description": "This page documents the process of dry run testing the app from a customer perspective. It includes step-by-step inst..."
-    }
-  ],
-  "Expectations": [
+  "2. Expectations": [
     {
       "name": "Agent Expectations",
-      "file": "docs/expectations/agent expectations.md",
+      "file": "docs/2. expectations/agent expectations.md",
       "description": "This page outlines the key features and enhancements expected in the uParcel Delivery Agent App."
     },
     {
       "name": "Customer Expectations",
-      "file": "docs/expectations/customer expectations.md",
+      "file": "docs/2. expectations/customer expectations.md",
       "description": "This page outlines the key features and enhancements expected in the uParcel Customer App."
+    }
+  ],
+  "3. Dry Runs": [
+    {
+      "name": "Customer",
+      "file": "docs/3. dry-runs/customer.md",
+      "description": "This page documents the process of dry run testing the app from a customer perspective. It includes step-by-step inst..."
     }
   ]
 }
