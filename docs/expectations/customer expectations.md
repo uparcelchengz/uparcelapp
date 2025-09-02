@@ -1,5 +1,7 @@
 # uParcel Customer App – Feature Expectations Spec
 
+This page outlines the key features and enhancements expected in the uParcel Customer App.
+
 ### 1. Core Booking Flow
 - One-tap **“Delivery Request”** entry point on home screen  
 - Auto-detect current location (blue dot) with editable address field  

@@ -1,5 +1,7 @@
 # uParcel Delivery Agent App – Feature Expectations Spec
 
+This page outlines the key features and enhancements expected in the uParcel Delivery Agent App.
+
 ### 1. Authentication & Profile
 - Secure login (email, phone, or SingPass integration)  
 - Profile with name, photo, and vehicle type (bike, car, van)  
