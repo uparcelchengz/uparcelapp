@@ -1,7 +1,7 @@
   
 # uParcel App Testing Documentation
 
-![uParcel Logo](https://uparcel.s3.us-west-2.amazonaws.com/uparcel/blog/cover/1696409567.718379_BestDeliveryAppinSingaporepng.png)
+<img src="https://uparcel.s3.us-west-2.amazonaws.com/uparcel/blog/cover/1696409567.718379_BestDeliveryAppinSingaporepng.png" alt="uParcel Logo" width="600" height="auto">
 
 ## About MHXL PTE. LTD (uParcel)
 
