@@ -4,7 +4,7 @@ The following problems were identified during the dry-run sessions. These issues
 
 ### Customer Dry-Run
 
-![Customer Role Homepage](https://github.com/uparcelchengz/uparcelapp/blob/main/img/problemc.png?raw=true)
+![Customer Role Homepage](https://github.com/uparcelchengz/uparcelapp/blob/main/img/problemc.png)
 
 - <span style="color: #e74c3c;">**"When first time using the I was not sure where to start. The homepage is overwhelming with buttons leads to different functionalities."**</span>
 - <span style="color: #f39c12;">**The lack of guidance or onboarding process**</span> made it difficult to understand the workflow.
@@ -15,7 +15,7 @@ The following problems were identified during the dry-run sessions. These issues
 
 ### Agent Dry-Run
 
-![Agent Role Homepage](https://github.com/uparcelchengz/uparcelapp/blob/main/img/problema.png?raw=true)
+![Agent Role Homepage](https://github.com/uparcelchengz/uparcelapp/blob/main/img/problema.png)
 
 - <span style="color: #e74c3c;">**In the homepage, the color of the text for date is in light gray**</span>, making it hard to read against the white background and agent might miss important information when overlooking the package details.
 - <span style="color: #8e44ad;">**Some jobs are automatically bundled together**</span> according to the region and agent are unable to break the bundle when accepting the jobs. For example agent have to accept all jobs in the bundle even if they want to deliver only one package. Although the agent can cancel the bundle after delivering the one package he/she wants and they still will be paid accordingly, <span style="color: #e67e22;">**this adds extra steps and complexity**</span> to the process.
