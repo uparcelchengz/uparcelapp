@@ -1144,3 +1144,100 @@ body {
     outline-offset: 2px;
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
 }
+
+/* Section Anchor Styling */
+.anchor-link {
+    color: var(--link-color);
+    text-decoration: none;
+    opacity: 0;
+    margin-left: 8px;
+    font-size: 0.8em;
+    transition: opacity 0.2s ease;
+}
+
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+    opacity: 0.7;
+}
+
+.anchor-link:hover {
+    opacity: 1 !important;
+    color: var(--primary-color);
+}
+
+/* Section Link Styling */
+.section-link {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--link-color);
+    transition: all 0.3s ease;
+}
+
+.section-link:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.section-link-icon {
+    font-size: 0.8em;
+    opacity: 0.6;
+    margin-left: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.section-link:hover .section-link-icon {
+    opacity: 1;
+}
+
+/* Highlighted Section Animation */
+.highlighted {
+    background-color: rgba(251, 146, 60, 0.1);
+    border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+    transition: all 0.3s ease;
+    margin-left: -18px;
+    animation: highlight-fade 2s ease-out;
+}
+
+@keyframes highlight-fade {
+    0% {
+        background-color: rgba(251, 146, 60, 0.3);
+        border-left-color: var(--primary-color);
+    }
+    100% {
+        background-color: rgba(251, 146, 60, 0.1);
+        border-left-color: var(--primary-color);
+    }
+}
+
+/* Scroll Margin for Anchor Links */
+h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: 100px; /* Account for fixed header */
+}
+
+/* Mobile optimizations for anchors */
+@media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 {
+        scroll-margin-top: 120px; /* More space on mobile */
+    }
+    
+    .anchor-link {
+        margin-left: 6px;
+        font-size: 0.75em;
+    }
+    
+    .section-link-icon,
+    .internal-link-icon {
+        font-size: 0.75em;
+    }
+    
+    .highlighted {
+        margin-left: -12px;
+        padding-left: 12px;
+        border-left-width: 2px;
+    }
+}

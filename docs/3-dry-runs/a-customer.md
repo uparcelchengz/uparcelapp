@@ -5,7 +5,9 @@ This page documents the process of dry run testing the app from a customer persp
 ## Steps
 
 ### 1. **Accessing the Homepage**
+
 ![Accessing the Homepage](../../img/homepagec.png)
+
    - Customers able to access multiple pages/functions in the app through the shortcuts
    - Shortcuts include: View Profile, Check Delivery Rates, Check My Fleet (Favorite Delivery Agents), Check Invoice, Check Delivery Status, E Wallet, Create a Delivery Request, Track Package by Entering Tracking Code.
 
