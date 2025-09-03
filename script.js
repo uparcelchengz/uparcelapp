@@ -142,6 +142,16 @@ function scrollToTop() {
 function closeSidebar() {
     state.sidebarOpen = false;
     elements.sidebar.classList.remove('open');
+    document.removeEventListener('click', handleOutsideClick);
+    
+    // Reset toggle button icon properly
+    const icon = elements.toggleBtn.querySelector('i');
+    icon.style.transform = 'scale(0)';
+    
+    setTimeout(() => {
+        icon.className = 'fas fa-bars';
+        icon.style.transform = 'scale(1)';
+    }, 150);
 }
 
 function handleResize() {

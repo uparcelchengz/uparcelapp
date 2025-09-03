@@ -1095,7 +1095,7 @@ body {
 @media (max-width: 768px) {
     .pagination-container {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 0.5rem;
     }
     
     .pagination-item.next,
@@ -1116,8 +1116,8 @@ body {
     }
     
     .pagination-navigation {
-        margin-top: 2.5rem;
-        padding-top: 1.5rem;
+        margin-top: 2rem;
+        padding-top: 1rem;
     }
     
     .pagination-title {

@@ -34,17 +34,17 @@
     {
       "name": "1 Problems",
       "file": "docs/4-analysis/1-problems.md",
-      "description": "Documentation page"
+      "description": "The following problems were identified during the dry-run sessions. These issues could be <u>***personal preferences ..."
     },
     {
       "name": "2 Improvements",
       "file": "docs/4-analysis/2-improvements.md",
-      "description": "Documentation page"
+      "description": "This document outlines the proposed improvements and enhancements for the uParcel app based on <u>***personal prefere..."
     },
     {
       "name": "3 Conclusion",
       "file": "docs/4-analysis/3-conclusion.md",
-      "description": "Documentation page"
+      "description": "After conducting comprehensive dry-run testing of the uParcel app from both customer and delivery agent perspectives,..."
     }
   ]
 }

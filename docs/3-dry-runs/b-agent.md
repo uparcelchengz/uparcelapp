@@ -12,19 +12,19 @@ This page documents the process of dry run testing the app from a delivery agent
 ## Steps
 
 ### 1. **Agent Dashboard - View Available Requests (Jobs)**
-   - ![Agent HomePage](../../img/homea.png)
+![Agent HomePage](../../img/homea.png)
    - Agents can see and accept all posted delivery requests in Singapore
    - Requests show pickup location, destination, earnings, date and time of delivery
 
 ### 2. **Review Delivery Request Details**
-   - ![Request Details](../../img/step1a.png)
+![Request Details](../../img/step1a.png)
    - View complete request information posted by customer
    - Check pickup and delivery addresses with map view
    - Review parcel details and special instructions (remarks)
    - See date & time of delivery and earnings
 
 ### 3. **Accept Delivery Request**
-   - ![Accept Request](../../img/step2a.png)
+![Accept Request](../../img/step2a.png)
    - Agent clicks "Accept" to claim the delivery
    - Request is removed from other agents' available list
    - Customer receives notification of agent assignment
@@ -32,25 +32,25 @@ This page documents the process of dry run testing the app from a delivery agent
    - When agent pickup the parcel, deliver it to the recipient, the agent need to update the status of the delivery request.
 
 ### 4. **Update Delivery Status**
-   - ![Update Delivery Status](../../img/step3a.png)
+![Update Delivery Status](../../img/step3a.png)
    - Agent can update the status of the delivery request at various stages (e.g., "Picked Up", "Delivered") by scanning the QR code on the parcel or enter the code manually.
 
 ### 5. **Cancel Delivery Request**
-   - ![Cancel Delivery Request](../../img/step4a.png)
+![Cancel Delivery Request](../../img/step4a.png)
    - Agent can cancel the delivery request before picking up the parcel and enter the reason for cancellation.
    - Customer receives notification of cancellation.
 
 ### 6. **Complete Delivery**
-   - ![Complete Delivery](../../img/step5a.png)
+![Complete Delivery](../../img/step5a.png)
    - After completing the delivery, the agent must update the status to "Delivered" and optionally take a photo proof of delivery.
 
 ### 7. **Job History**
-   - ![Job History](../../img/step6a.png)
+![Job History](../../img/step6a.png)
    - Agent able to check the job history for completed deliveries.
    - Agent also able to mark favorite jobs for receiving notifications when similar jobs are posted.
 
 ### 8. **Agent Wallet**
-   - ![Delivery Summary](../../img/step7a.png)
+![Delivery Summary](../../img/step7a.png)
    - View earnings summary and transaction history in the wallet section.
    - The page also shows agents the commission rate (20% platform commission) and nett earnings.
    - Agent can only instant payout earnings after reaching nett earnings of $200, otherwise payout will be processed according to the platform's payout schedule.
@@ -81,5 +81,5 @@ This agent workflow directly connects to the [Customer Dry Run Testing](3-dry-ru
 
 ---
 <br/>
-**Testing Note**: These workflows should be tested simultaneously to validate the complete delivery ecosystem functionality and real-time communication between customer and agent interfaces.
 
+> **Testing Note**: These workflows should be tested simultaneously to validate the complete delivery ecosystem functionality and real-time communication between customer and agent interfaces.

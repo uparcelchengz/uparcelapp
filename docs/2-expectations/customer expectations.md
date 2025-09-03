@@ -83,4 +83,3 @@ This page outlines the key features and enhancements expected in the uParcel Cus
 - Split deliveries for parcels exceeding weight/size limits  
 - Auto-suggest nearest valid drop-off point if address is invalid  
 
----

@@ -5,7 +5,7 @@
 
 ## About MHXL PTE. LTD (uParcel)
 
-**MHXL PTE. LTD.** (registered in Singapore as MXHL Pte Ltd, UEN 201419692G) is the technology company behind **uParcel**, a 24/7 on-demand courier platform that has been operating since July 2014.
+**MHXL PTE. LTD.** (registered in Singapore as MXHL Pte Ltd, UEN 201419692G) is the technology company behind **uParcel**, a 24/7 on-demand courier platform that has been operating since 2015.
 
 ### Company Information
 

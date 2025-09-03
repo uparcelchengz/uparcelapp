@@ -107,4 +107,3 @@ This page outlines the key features and enhancements expected in the uParcel Del
 - Customizable notification sounds for jobs  
 - Energy-saving mode (reduce GPS refresh rate when idle)  
 
----
