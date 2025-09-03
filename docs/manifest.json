@@ -1,28 +1,50 @@
 {
-  "1. Getting Started": [
+  "1 Getting Started": [
     {
       "name": "Introduction",
       "file": "docs/Introduction.md",
       "description": "<img src=\"https://uparcel.s3.us-west-2.amazonaws.com/uparcel/blog/cover/1696409567.718379_BestDeliveryAppinSingaporep..."
     }
   ],
-  "2. Expectations": [
+  "2 Expectations": [
     {
       "name": "Agent Expectations",
-      "file": "docs/2. expectations/agent expectations.md",
+      "file": "docs/2-expectations/agent expectations.md",
       "description": "This page outlines the key features and enhancements expected in the uParcel Delivery Agent App."
     },
     {
       "name": "Customer Expectations",
-      "file": "docs/2. expectations/customer expectations.md",
+      "file": "docs/2-expectations/customer expectations.md",
       "description": "This page outlines the key features and enhancements expected in the uParcel Customer App."
     }
   ],
-  "3. Dry Runs": [
+  "3 Dry Runs": [
     {
-      "name": "Customer",
-      "file": "docs/3. dry-runs/customer.md",
+      "name": "A Customer",
+      "file": "docs/3-dry-runs/a-customer.md",
       "description": "This page documents the process of dry run testing the app from a customer perspective. It includes step-by-step inst..."
+    },
+    {
+      "name": "B Agent",
+      "file": "docs/3-dry-runs/b-agent.md",
+      "description": "This page documents the process of dry run testing the app from a delivery agent perspective. It covers the complete ..."
+    }
+  ],
+  "4 Analysis": [
+    {
+      "name": "1 Problems",
+      "file": "docs/4-analysis/1-problems.md",
+      "description": "Documentation page"
+    },
+    {
+      "name": "2 Improvements",
+      "file": "docs/4-analysis/2-improvements.md",
+      "description": "Documentation page"
+    },
+    {
+      "name": "3 Conclusion",
+      "file": "docs/4-analysis/3-conclusion.md",
+      "description": "Documentation page"
     }
   ]
 }

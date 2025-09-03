@@ -50,7 +50,7 @@ function generateManifest() {
         const directories = [];
         
         // Add root docs directory
-        directories.push({ path: '', section: '1. Getting Started' });
+        directories.push({ path: '', section: '1 Getting Started' });
         
         // Scan for subdirectories
         if (fs.existsSync(basePath)) {
